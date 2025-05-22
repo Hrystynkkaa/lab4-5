@@ -49,7 +49,7 @@ def start_metrics_server(port=8000):
 def main():
     Thread(target=start_metrics_server, daemon=True).start()
 
-    token = os.getenv("TELEGRAM_TOKEN", "7214161561:AAHHV-BnFHhi3__6SOZhhxrcq1jBBuQ3xC0")
+    token = os.getenv("TELEGRAM_TOKEN", "")
     app = Application.builder().token(token).build()
 
     app.add_handler(CommandHandler("start", start))
